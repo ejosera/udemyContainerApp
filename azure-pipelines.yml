@@ -3,7 +3,7 @@ trigger:
     include:
     - main
   paths:
-    include:
+    include:g
     - azure-pipelines.yaml
     exclude:
     - Readme.md
@@ -56,7 +56,7 @@ stages:
     - task: AzureContainerApps@1
       displayName: Deploy new container version
       inputs:
-        azureSubscription: 'azure-connection'
+        azureSubscription: 'cicdudemy'
         imageToDeploy: '$(IMAGE_NAME):$(TAG)'
         containerAppName: '$(CONTAINERAPPS_APP)'
         resourceGroup: '$(RESOURCE_GROUP)'
